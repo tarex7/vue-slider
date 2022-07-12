@@ -37,5 +37,16 @@ const app = new Vue({
     ],
     activeIndex: 0,
   },
-  methods: {},
+  methods: {
+    gotoNext() {
+      this.activeIndex >= this.pictures.length - 1
+        ? (this.activeIndex = 0)
+        : this.activeIndex++;
+    },
+    gotoPrev() {
+      this.activeIndex <= 0
+        ? (this.activeIndex = this.pictures.length - 1)
+        : this.activeIndex--;
+    },
+  },
 });

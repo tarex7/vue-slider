@@ -29,12 +29,12 @@
         </div>
         <div class="carousel">
           <!-- Prev Button -->
-          <i id="prev-btn" class="fa-solid fa-chevron-left"></i>
+          <i @click="gotoPrev" id="prev-btn" class="fa-solid fa-chevron-left"></i>
           <!-- Gallery -->
           <div class="col-12">
             <div class="gallery mx-auto">
               <!-- Immagine + testo -->
-               <figure v-for="(pic,index) in pictures" v-if="activeIndex === index"class="active">
+               <figure v-for="(pic,index) in pictures" :class="{'active': activeIndex === index}">
                 <figcaption class="img-caption p-3 w-75"> 
                    <h2 id="title">{{pic.title}}</h2>
                   <p>
@@ -49,7 +49,7 @@
             </div>
           </div>
           <!-- Next Button -->
-          <i id="next-btn" class="fa-solid fa-chevron-right"></i>
+          <i @click="gotoNext" id="next-btn" class="fa-solid fa-chevron-right"></i>
         </div>
         <!-- Controls -->
         <div class="col-12 d-flex justify-content-center my-5">
