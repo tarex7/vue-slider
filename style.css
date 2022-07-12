@@ -1,0 +1,94 @@
+.debug {
+  border: 1px red solid;
+}
+
+body {
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+.carousel {
+  position: relative;
+}
+
+.gallery {
+  width: 70%;
+  position: relative;
+  height: 600px;
+}
+
+figure {
+  display: none;
+  height: 600px;
+}
+
+figure img {
+  width: 100%;
+  min-height: 100%;
+
+}
+
+.thumbnails {
+  width: 70%;
+}
+
+.thumbnails img {
+  width: calc(100% / 5 - 1px);
+  cursor: pointer;
+  height: 100px;
+  filter: saturate(0.1);
+  
+}
+
+figcaption {
+  position: absolute;
+  top: 0;
+  left: 13%;
+  text-shadow: 3px 2px 5px rgb(0, 0, 0);
+  text-align: center;
+}
+
+#next-btn,
+#prev-btn {
+  position: absolute;
+  top: 50%;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.fa-chevron-right {
+  left: 90%;
+  transition: all 0.3s;
+  color: #aeaeae;
+}
+
+.fa-chevron-left {
+  right: 90%;
+  transition: all 0.3s;
+  color: #aeaeae;
+}
+
+.fa-chevron-left:hover,
+.fa-chevron-right:hover {
+  transform: scale(1.3);
+  color: #fff;
+}
+
+.fa-solid {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.thumbnails .selected {
+  border: 2px rgba(211, 211, 0, 1) solid;
+  filter: saturate(1);
+  transform: scale(1.1);
+  z-index: 3;
+}
+
+.active {
+  display: block;
+}
