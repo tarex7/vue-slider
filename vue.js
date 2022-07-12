@@ -52,8 +52,10 @@ const app = new Vue({
     showImage(index) {
       this.activeIndex = index;
     },
+
     autoPlay() {
-      this.interval = setInterval(this.gotoNext, 3000);
+      this.isPlaying = true;
+      this.interval = setInterval(this.gotoNext, 2000);
     },
 
     stop() {
@@ -63,11 +65,8 @@ const app = new Vue({
         console.log("stop");
       }
     },
-    start() {
-      this.isPlaying = true;
-      this.interval = setInterval(this.gotoNext, 3000);
-    },
   },
+  
   beforeMount() {
     this.autoPlay();
   },

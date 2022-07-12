@@ -28,7 +28,8 @@ figure {
 figure img {
   width: 100%;
   min-height: 100%;
-cursor: pointer;
+  cursor: pointer;
+  
 }
 
 .thumbnails {
@@ -40,7 +41,6 @@ cursor: pointer;
   cursor: pointer;
   height: 100px;
   filter: saturate(0.1);
-  
 }
 
 figcaption {
