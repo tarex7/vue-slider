@@ -61,9 +61,10 @@
           <!-- Thumbnails -->
         <div class="col-12">
           <div class="thumbnails d-flex justify-content-between my-3 mx-auto">
-            <img
-                  src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg"
-                  alt=""
+            <img v-for="(pic,index) in pictures"
+            :class="{'selected': activeIndex === index}"
+            :src="pic.url"
+            :alt="pic.title"
                 /> 
           </div>
           </div>
