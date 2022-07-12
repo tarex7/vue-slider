@@ -51,5 +51,11 @@ const app = new Vue({
     showImage(index) {
       this.activeIndex = index;
     },
+    autoPlay() {
+      setInterval(this.gotoNext, 3000);
+    },
+  },
+  beforeMount() {
+    this.autoPlay();
   },
 });
