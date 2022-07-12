@@ -34,7 +34,7 @@
           <div class="col-12">
             <div class="gallery mx-auto">
               <!-- Immagine + testo -->
-               <figure v-for="(pic,index) in pictures" :class="{'active': activeIndex === index}">
+               <figure v-for="(pic,index) in pictures" :class="{'active': activeIndex === index}" @mouseover="stop" @mouseleave="start" >
                 <figcaption class="img-caption p-3 w-75"> 
                    <h2 id="title">{{pic.title}}</h2>
                   <p>
@@ -53,8 +53,8 @@
         </div>
         <!-- Controls -->
         <div class="col-12 d-flex justify-content-center my-5">
-          <i class="fa-solid fa-angles-left"></i>
-          <i  id="autoplayBtn" class="fa-solid fa-stop mx-5"></i>
+          <i  class="fa-solid fa-angles-left"></i>
+          <i  @click="stop" id="autoplayBtn" class="fa-solid fa-stop mx-5"></i>
           <i class="fa-solid fa-angles-right"></i>
         </div>
 

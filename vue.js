@@ -36,6 +36,7 @@ const app = new Vue({
       },
     ],
     activeIndex: 0,
+    isPlaying: true,
   },
   methods: {
     gotoNext() {
@@ -52,7 +53,19 @@ const app = new Vue({
       this.activeIndex = index;
     },
     autoPlay() {
-      setInterval(this.gotoNext, 3000);
+      this.interval = setInterval(this.gotoNext, 3000);
+    },
+
+    stop() {
+      if (this.isPlaying) {
+        clearInterval(this.interval);
+        this.isPlaying = false;
+        console.log("stop");
+      }
+    },
+    start() {
+      this.isPlaying = true;
+      this.interval = setInterval(this.gotoNext, 3000);
     },
   },
   beforeMount() {
