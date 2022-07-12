@@ -48,5 +48,8 @@ const app = new Vue({
         ? (this.activeIndex = this.pictures.length - 1)
         : this.activeIndex--;
     },
+    showImage(index) {
+      this.activeIndex = index;
+    },
   },
 });

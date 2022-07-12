@@ -61,7 +61,7 @@
           <!-- Thumbnails -->
         <div class="col-12">
           <div class="thumbnails d-flex justify-content-between my-3 mx-auto">
-            <img v-for="(pic,index) in pictures"
+            <img  v-for="(pic,index) in pictures" @click="showImage(index)"
             :class="{'selected': activeIndex === index}"
             :src="pic.url"
             :alt="pic.title"
