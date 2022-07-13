@@ -37,6 +37,7 @@ const app = new Vue({
     ],
     activeIndex: 0,
     isPlaying: true,
+    interval: undefined
   },
   methods: {
     gotoNext() {

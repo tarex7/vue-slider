@@ -34,7 +34,10 @@
           <div class="col-12">
             <div class="gallery mx-auto">
               <!-- Immagine + testo -->
-               <figure v-for="(pic,index) in pictures" :class="{'active': activeIndex === index}" @mouseover="stop" @mouseleave="autoPlay" >
+               <figure v-for="(pic,index) in pictures"
+                :class="{'active': activeIndex === index}"
+                 @mouseover="stop"
+                 @mouseleave="autoPlay" >
                 <figcaption class="img-caption p-3 w-75"> 
                    <h2 id="title">{{pic.title}}</h2>
                   <p>
