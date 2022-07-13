@@ -51,7 +51,6 @@ const app = new Vue({
     },
     showImage(index) {
       this.activeIndex = index;
-      console.log(this.position);
     },
     autoPlay() {
       this.isPlaying = true;
